@@ -7,15 +7,13 @@ app.use(cors());
 app.use(express.json());
 
 // CONFIGURAÇÃO DO BANCO DE DADOS (AlwaysData)
-const db = mysql.createPool({
+const db = mysql.createConnection({
   host: 'mysql-albertocossa.alwaysdata.net',
   user: '430726',
   password: 'Acossa@824018',
   database: 'albertocossa_sistema',
-  port:'3306',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
+  port:3306,
+  
 });
 /*
 const db = mysql.createConnection({
